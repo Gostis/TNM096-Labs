@@ -8,22 +8,14 @@ struct Node
 	int PuzzleState[9];
 	int g; //g sum of actual costs from the start to the current node
 	int h; //h estimated cost from the current node to the goal
-		   //f is the sum of g + h
-	int f_cost;
+	int f_cost; //f is the sum of g + h
 };
 
-class puzzleNodeComp {
-	bool reverse;
-public:
-	puzzleNodeComp(const bool& revparam = false) {
-		reverse = revparam;
-	}
-
-	bool operator() (const Node& lhs, const Node& rhs) const {
-		if (reverse)
-			return (lhs.f_cost > rhs.f_cost);
-		else
-			return (lhs.f_cost < rhs.f_cost);
+struct NodeCompare 
+{
+	bool operator()(const Node& ls, const Node& rs) const 
+	{
+		return ls.f_cost > rs.f_cost;
 	}
 };
 
@@ -42,6 +34,9 @@ public:
 private:
 	int manhattan(Node puzzleNode);
 	int manhattanDist(int p1, int p2);
+	
+	int WrongPositions(Node puzzleNode);
+	
 	int findEmpty(Node puzzleNode);
 
 	void moveZero(int from,int to, char dir);
@@ -52,14 +47,12 @@ private:
 
 	bool SameBoard(Node puzzleNode, Node goalNode);
 
+	void printSpecific(Node puzzleNode);
+
 	Node goalState;
 	Node *lastExpBranch;
 
 	map<string, Node> expTree;
-	typedef priority_queue <Node, vector<Node>, puzzleNodeComp> puzzlePQ;
+	typedef priority_queue <Node, vector<Node>, NodeCompare> puzzlePQ;
 	puzzlePQ openNodes;
-
-	
-
-
 };

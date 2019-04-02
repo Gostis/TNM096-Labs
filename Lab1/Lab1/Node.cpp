@@ -8,15 +8,15 @@ EightPuzzle::EightPuzzle()
 {
 	Node puzzleNode;
 
-	puzzleNode.PuzzleState[0] = 2;
-	puzzleNode.PuzzleState[1] = 5;
-	puzzleNode.PuzzleState[2] = 3;
-	puzzleNode.PuzzleState[3] = 4;
-	puzzleNode.PuzzleState[4] = 1;
+	puzzleNode.PuzzleState[0] =	6;
+	puzzleNode.PuzzleState[1] = 4;
+	puzzleNode.PuzzleState[2] = 7;
+	puzzleNode.PuzzleState[3] = 8;
+	puzzleNode.PuzzleState[4] = 5;
 	puzzleNode.PuzzleState[5] = 0;
-	puzzleNode.PuzzleState[6] = 7;
-	puzzleNode.PuzzleState[7] = 8;
-	puzzleNode.PuzzleState[8] = 6;
+	puzzleNode.PuzzleState[6] = 3;
+	puzzleNode.PuzzleState[7] = 2;
+	puzzleNode.PuzzleState[8] = 1;
 	
 	goalState.PuzzleState[0] = 1;
 	goalState.PuzzleState[1] = 2;
@@ -29,9 +29,7 @@ EightPuzzle::EightPuzzle()
 	goalState.PuzzleState[8] = 0;
 
 	puzzleNode.g = 0;
-	puzzleNode.h = puzzleNode.f_cost = manhattan(puzzleNode);
-
-	openNodes = puzzlePQ(puzzleNodeComp(true));
+	puzzleNode.h = puzzleNode.f_cost = WrongPositions(puzzleNode); //manhattan or WrongPosition
 
 	openNodes.push(puzzleNode);
 	//keyGen(puzzleNode);
@@ -100,16 +98,13 @@ void EightPuzzle::PuzzleSolver()
 			moveZero(8, 5, 'u');
 			break;
 		}
-		cout << openNodes.top().PuzzleState[0] << " " << openNodes.top().PuzzleState[1] << " " << openNodes.top().PuzzleState[2] << endl <<
-			openNodes.top().PuzzleState[3] << " " << openNodes.top().PuzzleState[4] << " " << openNodes.top().PuzzleState[5] << endl <<
-			openNodes.top().PuzzleState[6] << " " << openNodes.top().PuzzleState[7] << " " << openNodes.top().PuzzleState[8] << endl <<
-			"f: " << openNodes.top().f_cost << endl << "g: " << openNodes.top().g << endl <<
-			"Moves made: " << openNodes.top().h << endl;
-		
+		//printSpecific(*lastExpBranch);
+
 		moveCounter++;
 		if (SameBoard(openNodes.top(), goalState) || openNodes.empty())
 		{
 			cout << "Move counter: " << moveCounter << endl;
+			cout << "Puzzle cleared!!" << endl;
 			break;
 		}
 	}
@@ -124,7 +119,7 @@ void EightPuzzle::moveZero(int from, int to, char dir)
 		tempNode.PuzzleState[i] = lastExpBranch->PuzzleState[i];
 	}
 	tempNode.g = lastExpBranch->g + 1;
-	tempNode.h = manhattan(*lastExpBranch);
+	tempNode.h = WrongPositions(*lastExpBranch); //manhattan or WrongPosition
 	tempNode.f_cost = tempNode.g + tempNode.h;
 
 	//Setting the new position of the zero.
@@ -136,6 +131,23 @@ void EightPuzzle::moveZero(int from, int to, char dir)
 		openNodes.push(tempNode);
 	}
 
+}
+
+int EightPuzzle::WrongPositions(Node puzzleNode)
+{
+	int wPos = 0;
+	for (int i = 0; i < 9; i++)
+	{
+		if (puzzleNode.PuzzleState[i] != goalState.PuzzleState[i])
+		{
+			if (puzzleNode.PuzzleState[i] != 0)
+			{
+				wPos++;
+			}
+		}
+	}
+
+	return wPos;
 }
 
 bool EightPuzzle::SameBoard(Node puzzleNode, Node goalNode)
@@ -197,8 +209,8 @@ int EightPuzzle::manhattan(Node puzzleNode)
 		{
 			if (puzzleNode.PuzzleState[i] == goalState.PuzzleState[j])
 			{	
-				cout << "ManhattanSum = "<< manhattanSum << endl;
 				manhattanSum += manhattanDist(i, j);
+				//cout << "ManhattanSum = " << manhattanSum << endl;
 			}
 		}
 	}
@@ -217,6 +229,14 @@ int EightPuzzle::manhattanDist(int p1, int p2)
 	return (abs(x1 - x2) + abs(y1 - y2));
 }
 
+void EightPuzzle::printSpecific(Node puzzleNode)
+{
+	cout << puzzleNode.PuzzleState[0] << " " << puzzleNode.PuzzleState[1] << " " << puzzleNode.PuzzleState[2] << endl <<
+		puzzleNode.PuzzleState[3] << " " << puzzleNode.PuzzleState[4] << " " << puzzleNode.PuzzleState[5] << endl <<
+		puzzleNode.PuzzleState[6] << " " << puzzleNode.PuzzleState[7] << " " << puzzleNode.PuzzleState[8] << endl <<
+		"f: " << puzzleNode.f_cost << " and g: " << puzzleNode.g <<
+		" and h: " << puzzleNode.h << endl << endl;
+}
 
 void EightPuzzle::print()
 {
@@ -224,5 +244,5 @@ void EightPuzzle::print()
 		openNodes.top().PuzzleState[3] << " " << openNodes.top().PuzzleState[4] << " " << openNodes.top().PuzzleState[5] << endl <<
 		openNodes.top().PuzzleState[6] << " " << openNodes.top().PuzzleState[7] << " " << openNodes.top().PuzzleState[8] << endl <<
 		"f: " << openNodes.top().f_cost << endl << "g: " << openNodes.top().g << endl <<
-		"Moves made: " << openNodes.top().h << endl;
+		"h: " << openNodes.top().h << endl;
 }
