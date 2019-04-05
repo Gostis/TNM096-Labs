@@ -8,15 +8,15 @@ EightPuzzle::EightPuzzle()
 {
 	Node puzzleNode;
 
-	puzzleNode.PuzzleState[0] =	6;
-	puzzleNode.PuzzleState[1] = 4;
-	puzzleNode.PuzzleState[2] = 7;
-	puzzleNode.PuzzleState[3] = 8;
-	puzzleNode.PuzzleState[4] = 5;
-	puzzleNode.PuzzleState[5] = 0;
-	puzzleNode.PuzzleState[6] = 3;
-	puzzleNode.PuzzleState[7] = 2;
-	puzzleNode.PuzzleState[8] = 1;
+	puzzleNode.PuzzleState[0] =	4;
+	puzzleNode.PuzzleState[1] = 1;
+	puzzleNode.PuzzleState[2] = 2;
+	puzzleNode.PuzzleState[3] = 5;
+	puzzleNode.PuzzleState[4] = 8;
+	puzzleNode.PuzzleState[5] = 3;
+	puzzleNode.PuzzleState[6] = 0;
+	puzzleNode.PuzzleState[7] = 7;
+	puzzleNode.PuzzleState[8] = 6;
 	
 	goalState.PuzzleState[0] = 1;
 	goalState.PuzzleState[1] = 2;
@@ -29,7 +29,7 @@ EightPuzzle::EightPuzzle()
 	goalState.PuzzleState[8] = 0;
 
 	puzzleNode.g = 0;
-	puzzleNode.h = puzzleNode.f_cost = WrongPositions(puzzleNode); //manhattan or WrongPosition
+	puzzleNode.h = puzzleNode.f_cost = manhattan(puzzleNode); //manhattan or WrongPosition
 
 	openNodes.push(puzzleNode);
 	//keyGen(puzzleNode);
@@ -98,7 +98,7 @@ void EightPuzzle::PuzzleSolver()
 			moveZero(8, 5, 'u');
 			break;
 		}
-		//printSpecific(*lastExpBranch);
+		printSpecific(*lastExpBranch);
 
 		moveCounter++;
 		if (SameBoard(openNodes.top(), goalState) || openNodes.empty())
@@ -119,7 +119,7 @@ void EightPuzzle::moveZero(int from, int to, char dir)
 		tempNode.PuzzleState[i] = lastExpBranch->PuzzleState[i];
 	}
 	tempNode.g = lastExpBranch->g + 1;
-	tempNode.h = WrongPositions(*lastExpBranch); //manhattan or WrongPosition
+	tempNode.h = manhattan(*lastExpBranch); //manhattan or WrongPosition
 	tempNode.f_cost = tempNode.g + tempNode.h;
 
 	//Setting the new position of the zero.

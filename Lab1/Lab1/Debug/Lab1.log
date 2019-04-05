@@ -1,4 +1,7 @@
 ﻿  Node.cpp
+  Generating Code...
 c:\users\jacob\skola\år 4\tnm096\tnm096-labs\lab1\lab1\node.cpp(200): warning C4715: 'EightPuzzle::findEmpty': not all control paths return a value
+  Skipping... (no relevant changes detected)
+  Lab1.cpp
   Lab1.vcxproj -> C:\Users\jacob\Skola\År 4\TNM096\TNM096-Labs\Lab1\Debug\Lab1.exe
   Lab1.vcxproj -> C:\Users\jacob\Skola\År 4\TNM096\TNM096-Labs\Lab1\Debug\Lab1.pdb (Partial PDB)
