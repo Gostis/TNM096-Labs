@@ -16,9 +16,10 @@ int main()
 	//char c = test2[1][2];
 	char p;
 	//cout << test.TotNumConflicts() << endl;
-	test.Solver();
-	cout << "Number of conflicts: "<< test.numConflicts << endl;
+	//test.Solver();
 	test.Print();
+	cout << "Number of conflicts: "<< test.numConflicts << endl;
+	
 	cin >> p;
 	
 	return 0;

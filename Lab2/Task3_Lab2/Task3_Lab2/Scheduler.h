@@ -29,12 +29,13 @@ public:
 
 	 int findMinConflictsIdx(int idx);
 
+	 void Swap(int p1, int p2);
+
+	 int findConflicts(string compareLec, int idx);
+
+	 bool isConflict(int p1, int p2);
 private:
-	void Swap(int p1, int p2);
-
-	int findConflicts(string compareLec, int idx);
-
-	bool isConflict(int p1, int p2);
+	
 
 	
 

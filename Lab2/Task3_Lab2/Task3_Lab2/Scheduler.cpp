@@ -78,7 +78,7 @@ int Scheduler::findConflicts(string compareLec, int idx)
 {
 	int courseDigit = compareLec[2] - 48;
 	int timeToCheck = idx % 3;
-
+	//cout << "courseDigit: " << courseDigit << endl;
 	int conflictsRow = 0;
 
 	int tempRoom1 = 0;
@@ -89,26 +89,25 @@ int Scheduler::findConflicts(string compareLec, int idx)
 	{
 	case 0:
 		tempRoom1 = schedule[idx + 1][2] - 48;
-		tempRoom1 = schedule[idx + 2][2] - 48;
+		tempRoom2 = schedule[idx + 2][2] - 48;
 		break;
 	case 1:
 		tempRoom1 = schedule[idx - 1][2] - 48;
-		tempRoom1 = schedule[idx + 1][2] - 48;
+		tempRoom2 = schedule[idx + 1][2] - 48;
 		break;
 	case 2:
 		tempRoom1 = schedule[idx - 2][2] - 48;
-		tempRoom1 = schedule[idx - 1][2] - 48;
+		tempRoom2 = schedule[idx - 1][2] - 48;
 		break;
 	default:
 		break;
 	}
 
+	
 	if (isConflict(tempRoom1, courseDigit))
 		conflictsRow++;
 	if (isConflict(tempRoom2, courseDigit))
 		conflictsRow++;
-
-
 
 	return conflictsRow;
 }
@@ -132,8 +131,12 @@ int Scheduler::findMinConflictsIdx(int idx) {
 		//cout << conf << endl;
 		if (conf < minConflicts)
 		{
-			minConflicts = conf;
-			minIdx = i;
+			if (isConflict((int)compLec[2], (int)schedule[i][2]))
+			{
+				minConflicts = conf;
+				minIdx = i;
+			}
+			
 		}
 	}
 
@@ -147,16 +150,19 @@ void Scheduler::Solver() {
 
 	//int randIdx = 0, minTempIdx = 0;
 
-	while (totConf < 0 || stepCounter < maxSteps)
+	while (totConf > 0 && stepCounter < maxSteps)
 	{
 		int randIdx = rand() % scheduleSize;
 		int minTempIdx = findMinConflictsIdx(randIdx);
+		//cout << "min: "<< minTempIdx << "Rand: "<< randIdx << endl;
 		Swap(randIdx, minTempIdx);
 		totConf = TotNumConflicts();
 		//Print();
 		stepCounter++;
 	}
 	numConflicts = totConf;
+
+	
 
 }
 
