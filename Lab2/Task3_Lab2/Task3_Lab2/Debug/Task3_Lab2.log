@@ -1,4 +1,4 @@
-﻿  stdafx.cpp
-  Task3Lab2.cpp
+﻿  Scheduler.cpp
+c:\users\jacob\skola\år 4\tnm096\tnm096-labs\lab2\task3_lab2\task3_lab2\scheduler.cpp(13): warning C4244: 'initializing': conversion from 'std::chrono::system_clock::rep' to 'unsigned int', possible loss of data
   Task3_Lab2.vcxproj -> C:\Users\jacob\Skola\År 4\TNM096\TNM096-Labs\Lab2\Task3_Lab2\Debug\Task3_Lab2.exe
   Task3_Lab2.vcxproj -> C:\Users\jacob\Skola\År 4\TNM096\TNM096-Labs\Lab2\Task3_Lab2\Debug\Task3_Lab2.pdb (Partial PDB)
