@@ -4,4 +4,6 @@ C:\Users\jacob\Skola\År 4\TNM096\TNM096-Labs\Lab2\Task3_Lab2\Task3_Lab2\Schedul
           [
               _Rep=std::chrono::system_clock::rep
           ]
+  Task3Lab2.cpp
+  Generating Code...
   Task3_Lab2.vcxproj -> C:\Users\jacob\Skola\År 4\TNM096\TNM096-Labs\Lab2\Task3_Lab2\x64\Debug\Task3_Lab2.exe

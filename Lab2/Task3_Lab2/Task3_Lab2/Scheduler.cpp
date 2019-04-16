@@ -181,27 +181,52 @@ void Scheduler::Solver() {
 	}
 	numConflicts = totConf;
 
-	cout << endl <<"Number of steps: "<< stepCounter << endl << endl;
+	CalculateScore();
+
+	//cout << endl <<"Number of steps: "<< stepCounter << endl << endl;
 
 }
 
 void Scheduler::Print() {
-	cout << "TP51\tSP34 \t K3" << endl;
-	cout << "----\t----\t----\t" << endl;
+	int timeTable[8] = {9,10,11,12,1,2,3,4};
+	cout << "\tTP51\tSP34 \t K3" << endl;
+	cout << "\t----\t----\t----\t" << endl;
 	for (int row = 0; row < 8; row++)
 	{
+		cout << timeTable[row] << "\t";
 		for (int col = 0; col < 3; col++) 
 		{
-			if (schedule[row * 3 + col] == "88888" || schedule[row * 3 + col] == "77777")
-			{
-				cout << "     \t";
-			}
-			else
-			{
-				cout << schedule[row * 3 + col] << "\t";
-			}
+			cout << schedule[row * 3 + col] << "\t";
 		}
 		cout << endl;
 	}
+}
+
+void Scheduler::CalculateScore() {
+
+	for (int i = 0; i < 3; i++)
+	{
+		if (schedule[0 + i] == "     ")
+		{
+			score++;
+		}
+		if (schedule[6 + i] == "     ")
+		{
+			score++;
+
+		}
+		if (schedule[21 + i] == "     ")
+		{
+			score++;
+		}
+		if (schedule[12 + i] == "MT501" || schedule[12 + i] == "MT502")
+		{
+			score++;
+		}
+		if (schedule[15 + i] == "MT501" || schedule[15 + i] == "MT502")
+		{
+			score++;
+		}
+	}	
 }
 

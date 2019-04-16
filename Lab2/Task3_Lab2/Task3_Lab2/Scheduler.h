@@ -4,6 +4,7 @@
 using namespace std;
 class Scheduler {
 public:
+
 	string schedule[24] = { "MT101", "MT102", "MT103",
 		"MT104", "MT105", "MT106",
 		"MT107", "MT201", "MT202",
@@ -15,7 +16,7 @@ public:
 
 	 int numConflicts = 0;
 
-	 int scheduleSize = sizeof(schedule) / sizeof(schedule[0]);
+	 int score = 0;
 
 	 Scheduler();
 
@@ -26,18 +27,19 @@ public:
 	 void Print();
 
 	 void Solver();
-
-	 int findMinConflictsIdx(int idx);
-
-	 void Swap(int p1, int p2);
-
-	 int findConflicts(string compareLec, int idx);
-
-	 bool isConflict(int p1, int p2);
+ 
+	 void CalculateScore();
+	 
 private:
-	
 
-	
+	int findMinConflictsIdx(int idx);
 
+	void Swap(int p1, int p2);
+
+	int findConflicts(string compareLec, int idx);
+
+	bool isConflict(int p1, int p2);
+	
+	int scheduleSize = sizeof(schedule) / sizeof(schedule[0]);
 	
 };
