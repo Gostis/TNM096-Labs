@@ -10,16 +10,15 @@ using namespace std;
 
 int main()
 {
-	Scheduler test;
-	//string test2[2] = { "Hello", "MT101"};
-
-	//char c = test2[1][2];
-	char p;
-	//cout << test.TotNumConflicts() << endl;
-	//test.Solver();
-	test.Print();
-	cout << "Number of conflicts: "<< test.numConflicts << endl;
+	//Task 3
+	Scheduler schedule;
 	
+	cout << "Initial Schedule with: " << schedule.numConflicts << " conflicts."<< endl;
+	schedule.Print();
+	schedule.Solver();
+	schedule.Print();
+	cout << "\nNumber of conflicts: "<< schedule.numConflicts << endl;
+	char p;
 	cin >> p;
 	
 	return 0;

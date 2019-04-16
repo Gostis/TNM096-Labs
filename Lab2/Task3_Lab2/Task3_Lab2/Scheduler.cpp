@@ -52,8 +52,10 @@ bool Scheduler::isConflict(int p1, int p2) {
 	}
 }
 
+//Calculating tot number of conflicts. Loops through every hour.
 int Scheduler::TotNumConflicts()
 {
+	
 	int totConflicts = 0;
 	int room_lec[3];
 
@@ -74,17 +76,21 @@ int Scheduler::TotNumConflicts()
 };
 
 
-int Scheduler::findConflicts(string compareLec, int idx) 
+int Scheduler::findConflicts(string compareLec, int idx)
 {
-	int courseDigit = compareLec[2] - 48;
+	
+	int courseDigit = compareLec[0] - 48;
+
+	//Which room the current index is located in
 	int timeToCheck = idx % 3;
-	//cout << "courseDigit: " << courseDigit << endl;
+	
 	int conflictsRow = 0;
 
 	int tempRoom1 = 0;
 	int tempRoom2 = 0;
 	
 
+	//Different rooms to check conflict with depending on where idx is loacted.
 	switch (timeToCheck)
 	{
 	case 0:
@@ -103,7 +109,7 @@ int Scheduler::findConflicts(string compareLec, int idx)
 		break;
 	}
 
-	
+	//Check which rooms are in conflict withe our current course
 	if (isConflict(tempRoom1, courseDigit))
 		conflictsRow++;
 	if (isConflict(tempRoom2, courseDigit))
@@ -113,56 +119,69 @@ int Scheduler::findConflicts(string compareLec, int idx)
 }
 
 int Scheduler::findMinConflictsIdx(int idx) {
-
-	string compLec = schedule[idx];
 	
+	//Setting the current course digit(had to compare between strings because otherwise the empty lectures would had been wrongly interpreted) 
+	string compLec = schedule[idx];
+	string courseDigits(1, compLec[2]);
+
 	//High number to start with to get a initial value that is lower.
 	int minIdx = idx;
 	int minConflicts = 100;
-
-	if (schedule[idx] == "88888" || schedule[idx] == "77777")
+	
+	//Check if the current lecture is empty.
+	if (schedule[idx] == "     ")
 	{
 		return idx;
 	}
 
 	for (int i = 0; i < scheduleSize; i++)
 	{
-		int conf = findConflicts(compLec, i);
-		//cout << conf << endl;
+		//Calculating the conflict that would happend if courseDigits was moved to i.
+		int conf = findConflicts(courseDigits, i);
+	
 		if (conf < minConflicts)
 		{
-			if (isConflict((int)compLec[2], (int)schedule[i][2]))
+			//String to check if the current slot have the same course digit as the moved one
+			string compare(1, schedule[i][2]);
+			
+			//Change to the lowest amount of conflicts if they differ the course digit
+			if (courseDigits != compare)
 			{
 				minConflicts = conf;
 				minIdx = i;
 			}
-			
+
 		}
 	}
 
 	return minIdx;
+	
 }
 
 void Scheduler::Solver() {
 
 	int totConf = TotNumConflicts();
-	int maxSteps = 200000, stepCounter = 0;
+	int maxSteps = 10000, stepCounter = 0;
 
-	//int randIdx = 0, minTempIdx = 0;
-
+	int randIdx = 0, minTempIdx = 0;
+	
+	//Min conflict algo
 	while (totConf > 0 && stepCounter < maxSteps)
 	{
-		int randIdx = rand() % scheduleSize;
-		int minTempIdx = findMinConflictsIdx(randIdx);
-		//cout << "min: "<< minTempIdx << "Rand: "<< randIdx << endl;
-		Swap(randIdx, minTempIdx);
-		totConf = TotNumConflicts();
-		//Print();
 		stepCounter++;
+		//Setting a random lecture.
+		randIdx = rand() % scheduleSize;
+		//Find the minimum conflicts index 
+		minTempIdx = findMinConflictsIdx(randIdx);
+		//Swapping the position.
+		Swap(randIdx, minTempIdx);
+		//Calculating the total amount of conflicts.
+		totConf = TotNumConflicts();
+		
 	}
 	numConflicts = totConf;
 
-	
+	cout << endl <<"Number of steps: "<< stepCounter << endl << endl;
 
 }
 
