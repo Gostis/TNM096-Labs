@@ -11,7 +11,7 @@ using namespace std;
 
 int main()
 {
-	/*
+	
 	//Task 3
 	Scheduler schedule;
 	
@@ -21,10 +21,10 @@ int main()
 	schedule.Print();
 	cout << "\nNumber of conflicts: "<< schedule.numConflicts << endl;
 	cout << "Schedule score: " << schedule.score << endl;
-	*/
+	
 
 	//Task 4
-
+	/*
 	vector<Scheduler> scheduleVec;
 
 	int bestIdx = 0;
@@ -64,7 +64,7 @@ int main()
 	cout << "This was the schedule with the best score: " << endl;
 	Scheduler bestSchedule = scheduleVec.at(bestIdx);
 	bestSchedule.Print();
-
+	*/
 	return 0;
 }
 

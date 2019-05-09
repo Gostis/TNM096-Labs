@@ -1,9 +1,2 @@
-﻿  Scheduler.cpp
-C:\Users\jacob\Skola\År 4\TNM096\TNM096-Labs\Lab2\Task3_Lab2\Task3_Lab2\Scheduler.cpp(13): warning C4244: 'initializing': conversion from '_Rep' to 'unsigned int', possible loss of data
-          with
-          [
-              _Rep=std::chrono::system_clock::rep
-          ]
-  Task3Lab2.cpp
-  Generating Code...
+﻿  Task3Lab2.cpp
   Task3_Lab2.vcxproj -> C:\Users\jacob\Skola\År 4\TNM096\TNM096-Labs\Lab2\Task3_Lab2\x64\Debug\Task3_Lab2.exe
