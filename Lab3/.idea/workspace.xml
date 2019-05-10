@@ -5,20 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0f9139a2-3fdb-4ecd-90ab-88bbd436931b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../Lab2/Task3_Lab2/.vs/Task3_Lab2/v16/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab2/Task3_Lab2/.vs/Task3_Lab2/v16/.suo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab2/Task3_Lab2/.vs/Task3_Lab2/v16/Browse.VC.db" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab2/Task3_Lab2/.vs/Task3_Lab2/v16/Browse.VC.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab2/Task3_Lab2/Task3_Lab2/Task3Lab2.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab2/Task3_Lab2/Task3_Lab2/Task3Lab2.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab2/Task3_Lab2/Task3_Lab2/x64/Debug/Scheduler.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab2/Task3_Lab2/Task3_Lab2/x64/Debug/Scheduler.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab2/Task3_Lab2/Task3_Lab2/x64/Debug/Task3Lab2.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab2/Task3_Lab2/Task3_Lab2/x64/Debug/Task3Lab2.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab2/Task3_Lab2/Task3_Lab2/x64/Debug/Task3_Lab2.log" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab2/Task3_Lab2/Task3_Lab2/x64/Debug/Task3_Lab2.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab2/Task3_Lab2/Task3_Lab2/x64/Debug/Task3_Lab2.tlog/CL.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab2/Task3_Lab2/Task3_Lab2/x64/Debug/Task3_Lab2.tlog/CL.read.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab2/Task3_Lab2/Task3_Lab2/x64/Debug/Task3_Lab2.tlog/CL.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab2/Task3_Lab2/Task3_Lab2/x64/Debug/Task3_Lab2.tlog/CL.write.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab2/Task3_Lab2/Task3_Lab2/x64/Debug/Task3_Lab2.tlog/link.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab2/Task3_Lab2/Task3_Lab2/x64/Debug/Task3_Lab2.tlog/link.read.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab2/Task3_Lab2/Task3_Lab2/x64/Debug/vc142.idb" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab2/Task3_Lab2/Task3_Lab2/x64/Debug/vc142.idb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab2/Task3_Lab2/Task3_Lab2/x64/Debug/vc142.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab2/Task3_Lab2/Task3_Lab2/x64/Debug/vc142.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab2/Task3_Lab2/x64/Debug/Task3_Lab2.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab2/Task3_Lab2/x64/Debug/Task3_Lab2.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab2/Task3_Lab2/x64/Debug/Task3_Lab2.ilk" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab2/Task3_Lab2/x64/Debug/Task3_Lab2.ilk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab2/Task3_Lab2/x64/Debug/Task3_Lab2.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab2/Task3_Lab2/x64/Debug/Task3_Lab2.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,11 +16,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/CNF.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="585">
+            <state relative-caret-position="-1825">
               <caret line="39" selection-start-line="39" selection-end-line="39" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -41,24 +29,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Clause.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="328">
-              <caret line="188" column="1" lean-forward="true" selection-start-line="188" selection-start-column="1" selection-end-line="188" selection-end-column="1" />
-              <folding>
-                <element signature="e#111#119#0" expanded="true" />
-                <element signature="e#181#189#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="165">
+              <caret line="77" column="1" lean-forward="true" selection-start-line="77" selection-start-column="1" selection-end-line="77" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+            <state relative-caret-position="60">
+              <caret line="4" column="70" lean-forward="true" selection-start-line="4" selection-start-column="70" selection-end-line="4" selection-end-column="70" />
             </state>
           </provider>
         </entry>
@@ -91,9 +75,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="width" value="977" />
-    <option name="height" value="1038" />
+    <option name="x" value="-9" />
+    <option name="width" value="978" />
+    <option name="height" value="1039" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -124,7 +108,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557390263152" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557390334061" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RunDashboard">
@@ -166,12 +150,13 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1557145989168</updated>
-      <workItem from="1557145995245" duration="43282000" />
+      <workItem from="1557145995245" duration="43359000" />
+      <workItem from="1557473331804" duration="806000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43282000" />
+    <option name="totallyTimeSpent" value="44165000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -199,7 +184,7 @@
       <window_info anchor="bottom" id="Database Changes" order="3" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" weight="0.32907802" />
-      <window_info anchor="bottom" id="Run" order="6" visible="true" weight="0.32907802" />
+      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.32907802" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
       <window_info anchor="bottom" id="Messages" order="8" weight="0.32907802" />
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
@@ -227,27 +212,19 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="149">
           <caret line="147" column="19" selection-start-line="147" selection-start-column="19" selection-end-line="147" selection-end-column="19" />
-          <folding>
-            <element signature="e#5748#5749#0" expanded="true" />
-            <element signature="e#5784#5785#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Clause.java">
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="188" column="1" lean-forward="true" selection-start-line="188" selection-start-column="1" selection-end-line="188" selection-end-column="1" />
-          <folding>
-            <element signature="e#111#119#0" expanded="true" />
-            <element signature="e#181#189#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="60">
+          <caret line="4" column="70" lean-forward="true" selection-start-line="4" selection-start-column="70" selection-end-line="4" selection-end-column="70" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CNF.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
+        <state relative-caret-position="-1825">
           <caret line="39" selection-start-line="39" selection-end-line="39" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -255,10 +232,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/Clause.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="165">
+          <caret line="77" column="1" lean-forward="true" selection-start-line="77" selection-start-column="1" selection-end-line="77" selection-end-column="1" />
         </state>
       </provider>
     </entry>
