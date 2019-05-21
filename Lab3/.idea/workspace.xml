@@ -4,10 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/src/Main.java" line="5" mnemonic="7" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0f9139a2-3fdb-4ecd-90ab-88bbd436931b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-    </list>
+    <list default="true" id="0f9139a2-3fdb-4ecd-90ab-88bbd436931b" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -151,12 +148,12 @@
       <option name="presentableId" value="Default" />
       <updated>1557145989168</updated>
       <workItem from="1557145995245" duration="43359000" />
-      <workItem from="1557473331804" duration="806000" />
+      <workItem from="1557473331804" duration="881000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44165000" />
+    <option name="totallyTimeSpent" value="44240000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -169,7 +166,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Designer" order="0" />
       <window_info id="UI Designer" order="1" />
@@ -184,7 +180,7 @@
       <window_info anchor="bottom" id="Database Changes" order="3" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" weight="0.32907802" />
-      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.32907802" />
+      <window_info anchor="bottom" id="Run" order="6" weight="0.32907802" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
       <window_info anchor="bottom" id="Messages" order="8" weight="0.32907802" />
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
